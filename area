@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+    {
+     float pbase,pheight,rtbase,rtheight,d1,d2,t1,t2,d,s,a,b,c;
+     int n;
+     printf(" 1 triangle \n 2 right angled triangle \n 3 trapezium \n 4 rhombus \n 5 parallelogram");
+     printf("\n enter choice");
+     scanf("%d",&n);
+     switch(n)
+           {
+            case1:
+            printf("enter 3 sides of triangle:");
+            scanf("%f%f%f",&a,&b,&c);
+            s=(a+b+c)/2;
+            printf("\n area=%f",sqrt(s(s-a)*(s-b)*(s-c)));
+            break;
+            case2:
+            printf('\n enter height and base");
+            scanf("%f%f",&rtheight,&rtbase);
+            printf("\n area=%f",1/2*rtheight*rtbase);
+            break;
+            case3:
+            printf("\n enter length of parallel sides and distance between them");
+            scanf("%f%f%f",&t1,&t2,&d);
+            printf("\n area=%f",1/2*(t1+t2)*d);
+            break;
+            case4:
+            printf("\n enter diagonal of rhombus");
+            scanf("%f%f",&d1,&d2);
+            printf("\n area=%f",1/2*(d1*d2));
+            break;
+            case5:
+            printf("\n enter base and height of parallelogram");
+            scanf("%f%f",&pbase,&pheight);
+            printf("\n area=%f",pbase*pheight);
+            break;
+            default:
+            printf("\n error");
+           }
+    }
