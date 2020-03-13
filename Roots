@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<math.h> // Used for sqrt()
+int main()
+   {
+    float a,b,c;
+    float root1,root2,imaginary;
+    float discriminant;
+    printf("Enter the values of a,b,c of quadratic equation(ax^2+bx+c):");
+    scanf("%f%f%f",&a,&b,&c);
+    /* Find discriminant of the equation */
+    discriminant=(b*b)-(4*a*c);
+    /* Find nature of the discriminant  */
+    if(discriminant>0)
+      {
+       root1=(-b+sqrt(discriminant))/(2*a);
+       root2=(-b-sqrt(discriminant))/(2*a);
+       printf("Two distinct and real roots exists:%f and %f",root1,root2);
+       }
+       else if(discriminant==0)
+              { 
+               root1=root2=-b/(2*a);
+               printf("Two equal and real roots exists:%f and %f",root1,root2);
+              }
+              else if(discriminant<0)
+                     {
+                      root1=root2=-b/(2*a);
+                      imaginary=sqrt(-discriminant)/(2*a);
+                      printf("Two distinct complex roots exists:%f+i%f and %f-i%f",root1,root2,imaginary);
+                      }
+                      return 0;
+      }
+              
+              
+    
